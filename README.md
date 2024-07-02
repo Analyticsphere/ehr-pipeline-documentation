@@ -2,10 +2,10 @@
 
 ### Objectives
 - Use out-of-the-box OHDSI Tools to:
-    - Determine overall quality of EHR data according to OMOP CDM standards --> **DataQualityDashoboard**
-    - Summarize content of EHR data prior to phenotype/cohort definitions   --> **ACHILLES**
-    - Put the results in an explorable form for researchers                 --> **ARES**
-    - Identify variables required for Cervical Screening Pilot              --> **ATHENA**
+    - Assess overall quality of EHR data according to OMOP CDM standards --> **DataQualityDashoboard**
+    - Summarize content of EHR data prior to phenotype/cohort definitions ---> **ACHILLES**
+    - Put the results in an explorable form for researchers ---------------------> **ARES**
+    - Identify variables required for Cervical Screening Pilot -------------------> **ATHENA**
     - Determine which of these are in our data set
 
 > “Let's start at the very beginning, a very good place to start” ~ Fraulein Maria
