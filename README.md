@@ -19,11 +19,8 @@
 
 ### Data tasks:
 0) Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners`
-1) Run DQD on HP data
-2) Run ACHILLES on HP data
-3) Use ARES to summarize/vizualize data
-4) Regroup on barriers to 1-3, iterate
-5) Share results with Nicole
+1) Run DQD, ACHILLES on HP data and visualize on ARES using `generate_ares_data.R`
+3) Share results with Nicole
 
 ### Investigative tasks:
 0) Compile list of Cervical Cancer-related concepts in CDM
