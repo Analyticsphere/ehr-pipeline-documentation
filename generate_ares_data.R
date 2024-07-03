@@ -3,36 +3,47 @@
 
 # ToDo: 
 #   - Add "ares" to .gitignore file to avoid accidental sharing of data via GH
+#   - Set up DatabaseConnector driver: 
+#       - https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
 #   - Change configuration to something appropriate for Connect Data
 #   - Review DatabaseConnector docs to understand connection to BigQuery
 #       - https://ohdsi.github.io/DatabaseConnector/
 #   - Figure out "server" and "driver"
 #   - Ensure that ARES "website" is served locally, not on internet!
 
-# configuration
-aresDataRoot          <- "/webserver_root/ares/data"
+# Install dependencies
+library(DatabaseConnector)
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("OHDSI/DataQualityDashboard")
+remotes::install_github("OHDSI/Achilles")
+
+# Configure
+aresDataRoot          <- "/ehr-pilot/ares/data"
 cdmVersion            <- "5.3"
-cdmDatabaseSchema     <- "cdm_schema"
-resultsDatabaseSchema <- "result_schema"
+cdmDatabaseSchema     <- "ehr"
+resultsDatabaseSchema <- "ehr_analyses"
 cdmSourceName         <- "source_name"
 
-# retrieve environment settings
-dbms         <- Sys.getenv("dbms")
-server       <- Sys.getenv("server")
-user         <- Sys.getenv("user")
+# Set connection details
+dbms         <- "bigquery"
+server       <- "localhost"         
+user         <- "root"              
 password     <- Sys.getenv("password")
-pathToDriver <- Sys.getenv("path_to_driver")
 
-# configure connection
+# Set up driver and environment variable using these instructions:
+# https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
+pathToDriver <- Sys.getenv("DATABASECONNECTOR_JAR_FOLDER")
+
+# Configure connection
 connectionDetails <- DatabaseConnector::createConnectionDetails(
   dbms     = dbms,
   server   = server,
-  user     = user,
-  password = password,
-  pathToDriver = pathToDriver
+  user     = user
+  # ,password = password
+  # ,pathToDriver = pathToDriver
 )
 
-# run achilles
+# Run Achilles
 Achilles::achilles(
   cdmVersion = cdmVersion,
   connectionDetails = connectionDetails,
@@ -40,11 +51,11 @@ Achilles::achilles(
   resultsDatabaseSchema = resultsDatabaseSchema
 )
 
-# obtain the data source release key (naming convention for folder structures)
+# Get data source release key (naming convention for folder structures)
 releaseKey <- AresIndexer::getSourceReleaseKey(connectionDetails, cdmDatabaseSchema)
 datasourceReleaseOutputFolder <- file.path(aresDataRoot, releaseKey)
 
-# run data quality dashboard and output results to data source release folder in ares data folder
+# Run data quality dashboard and output results to data source release folder in ares data folder
 dqResults <- DataQualityDashboard::executeDqChecks(
   connectionDetails = connectionDetails,
   cdmDatabaseSchema = cdmDatabaseSchema,
@@ -56,7 +67,7 @@ dqResults <- DataQualityDashboard::executeDqChecks(
   outputFolder = datasourceReleaseOutputFolder
 )
 
-# export the achilles results to the ares folder
+# Export the Achilles results to the ares folder
 Achilles::exportAO(
   connectionDetails = connectionDetails,
   cdmDatabaseSchema = cdmDatabaseSchema,
@@ -65,7 +76,7 @@ Achilles::exportAO(
   outputPath = aresDataRoot
 )
 
-# perform temporal characterization
+# Perform temporal characterization
 outputFile <- file.path(datasourceReleaseOutputFolder, "temporal-characterization.csv")
 Achilles::performTemporalCharacterization(
   connectionDetails = connectionDetails,
@@ -74,10 +85,10 @@ Achilles::performTemporalCharacterization(
   outputFile = outputFile
 )
 
-# augment concept files with temporal characterization data
+# Augment concept files with temporal characterization data
 AresIndexer::augmentConceptFiles(releaseFolder = file.path(aresDataRoot, releaseKey))
 
-# build network level index for all existing sources
+# Build network level index for all existing sources
 sourceFolders <- list.dirs(aresDataRoot,recursive=F)
 AresIndexer::buildNetworkIndex(sourceFolders = sourceFolders, outputFolder = aresDataRoot)
 AresIndexer::buildDataQualityIndex(sourceFolders = sourceFolders, outputFolder = aresDataRoot)
