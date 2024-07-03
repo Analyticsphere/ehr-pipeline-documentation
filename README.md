@@ -37,6 +37,7 @@
 - CDM documentation:
     - [_OMOP CDM v5.3_ documenation](https://ohdsi.github.io/CommonDataModel/cdm53.html#person)
     - [_ATHENA_: CDM concept lookup tool](https://athena.ohdsi.org/search-terms/start)
+    - [_Book of OHDSI_](https://ohdsi.github.io/TheBookOfOhdsi/)
 - [_OHDSI Software Tools_](https://www.ohdsi.org/software-tools/)
     - [_HADES_: OHDSI's Health-Analytics Data to Evidence Suite](https://ohdsi.github.io/Hades/packages.html)
     - [_ACHILLES_](https://ohdsi.github.io/Achilles/)
