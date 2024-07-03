@@ -44,3 +44,14 @@
     - [_ARES_](https://ohdsi.github.io/Ares/)
     - [_DataQualityDashboard_](https://github.com/OHDSI/DataQualityDashboard)
     - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
+
+## Meeting Notes
+
+#### 4/3: 
+- Discussed initial README.md and documentation strategy
+- Discussed OHDSI software tools that map to each of our objectives
+- Action items:
+    - **everyone:** Familiarize ourselves with the CDM/OHDSI documentation and tools.
+    - **@rebexxx:** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1) Add Connect_ID's to all CDM tables from HP
+    - **@moonsoyoun**: [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) Generate counts of records per person for each table. Make histogram.
+    - **@jacobmpeters:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get `generate_ares_data.R` up and running with our BigQuery data.
