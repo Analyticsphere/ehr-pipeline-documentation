@@ -18,8 +18,8 @@
 4) Install ARES: [ARES installation guide](https://ohdsi.github.io/Ares/)
 
 ### Data tasks:
-0) Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners`
-1) Run DQD, ACHILLES on HP data and visualize on ARES using `generate_ares_data.R`
+0) Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners` **@rebexxx** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1)
+1) Run DQD, ACHILLES on HP data and visualize on ARES using `generate_ares_data.R` **@jacobmpeters** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3)
 3) Share results with Nicole
 
 ### Investigative tasks:
@@ -27,8 +27,8 @@
 1) Compile list of those concepts also present in HP data
 
 ### Low-hanging fruit for @moonsoyoun:
-1) SQL: Count of records `n_records` per `person_id` for each table.
-2) R: Use counts to generate a histogram.
+1) SQL: Count of records `n_records` per `person_id` for each table. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
+2) R: Use counts to generate a histogram. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
 
 ### Links:
 - Our documentation:
