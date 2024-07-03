@@ -11,7 +11,7 @@
 > “Let's start at the very beginning, a very good place to start” ~ Fraulein Maria
 > 
 ### Start-up tasks:
-0) Watch [ODSI Community Call [4/16/24]](https://www.youtube.com/watch?v=-Wovqpm7Cdc) introducing ARES and DataQualityDashboard
+0) Watch [OHDSI Community Call [4/16/24]](https://www.youtube.com/watch?v=-Wovqpm7Cdc) introducing ARES and DataQualityDashboard
 1) Set up R environment according to [HADES R Setup Guide](https://ohdsi.github.io/Hades/rSetup.html)
 2) Follow [DQD installation guide](https://ohdsi.github.io/DataQualityDashboard/#installation)
 3) Install ACHILLES: [ACHILLES installation instructions](https://ohdsi.github.io/Achilles/#installation)
