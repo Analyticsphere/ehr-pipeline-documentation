@@ -41,3 +41,4 @@
     - [_ACHILLES_](https://ohdsi.github.io/Achilles/)
     - [_ARES_](https://ohdsi.github.io/Ares/)
     - [_DataQualityDashboard_](https://github.com/OHDSI/DataQualityDashboard)
+    - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
