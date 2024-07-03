@@ -27,7 +27,8 @@
 1) Compile list of those concepts also present in HP data
 
 ### Low-hanging fruit for @moonsoyoun:
-0) 
+1) SQL: Count of records `n_records` per `person_id` for each table.
+2) R: Use counts to generate a histogram.
 
 ### Links:
 - Our documentation:
