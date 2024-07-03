@@ -47,7 +47,7 @@
 
 ## Meeting Notes
 
-#### 4/3: 
+#### 04/03/24: 
 - Discussed initial README.md and documentation strategy
 - Discussed OHDSI software tools that map to each of our objectives
 - Action items:
