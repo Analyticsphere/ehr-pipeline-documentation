@@ -15,6 +15,19 @@
 1) Set up R environment according to [HADES R Setup Guide](https://ohdsi.github.io/Hades/rSetup.html)
 2) Follow [DQD installation guide](https://ohdsi.github.io/DataQualityDashboard/#installation)
 3) Install ACHILLES: [ACHILLES installation instructions](https://ohdsi.github.io/Achilles/#installation)
+4) Install ARES: [ARES installation guide](https://ohdsi.github.io/Ares/)
+
+### Data tasks:
+0) Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners`
+1) Run DQD on HP data
+2) Run ACHILLES on HP data
+3) Use ARES to summarize/vizualize data
+4) Regroup on barriers to 1-3, iterate
+5) Share results with Nicole
+
+### Investigative tasks:
+0) Compile list of Cervical Cancer-related concepts in CDM
+1) Compile list of those concepts also present in HP data
 
 ### Links:
 - Our documentation:
