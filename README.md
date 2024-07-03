@@ -26,6 +26,9 @@
 0) Compile list of Cervical Cancer-related concepts in CDM
 1) Compile list of those concepts also present in HP data
 
+### Low-hanging fruit for @moonsoyoun:
+0) 
+
 ### Links:
 - Our documentation:
     - [_EHR Pilot Meeting_ presentation](https://nih.app.box.com/file/1048412458673)
