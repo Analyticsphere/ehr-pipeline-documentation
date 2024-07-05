@@ -54,4 +54,4 @@
     - **everyone:** Familiarize ourselves with the CDM/OHDSI documentation and tools.
     - **@rebexxx:** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1) Add Connect_ID's to all CDM tables from HP
     - **@moonsoyoun**: [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) Generate counts of records per person for each table. Make histogram.
-    - **@jacobmpeters:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get `generate_ares_data.R` up and running with our BigQuery data.
+    - **@jacobmpeters:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
