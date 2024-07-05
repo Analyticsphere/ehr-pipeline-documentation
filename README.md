@@ -45,6 +45,44 @@
     - [_DataQualityDashboard_](https://github.com/OHDSI/DataQualityDashboard)
     - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
 
+# Cervical Cancer Screening Procedures and Results
+
+### Screening Procedures (CPT Codes)
+
+| **Procedure**                    | **CPT Code** | **Description**                                                                                  |
+|----------------------------------|--------------|--------------------------------------------------------------------------------------------------|
+| Cervical Cytology (Pap Smear)    | 88141        | Cytopathology, cervical or vaginal (any reporting system), requiring interpretation by physician  |
+|                                  | 88142        | Cytopathology, cervical or vaginal (any reporting system), automated thin layer preparation       |
+|                                  | 88143        | Cytopathology, cervical or vaginal (any reporting system), manual screening under physician supervision |
+|                                  | 88147        | Cytopathology, cervical or vaginal, smears, any reporting system, screening and interpretation    |
+|                                  | 88148        | Cytopathology, cervical or vaginal, smears, any reporting system, manual screening and interpretation |
+| HPV Testing                      | 87624        | Detection of human papillomavirus (HPV), high-risk types (e.g., 16, 18) by nucleic acid (DNA or RNA) |
+|                                  | 87625        | Detection of human papillomavirus (HPV), types 16 and 18 only, by nucleic acid (DNA or RNA)       |
+| Endocervical Curettage           | 57505        | Endocervical curettage (not done as part of a dilation and curettage)                             |
+| Colposcopy                       | 57454        | Colposcopy of the cervix including upper/adjacent vagina; with biopsy(s) of the cervix and endocervical curettage |
+| Cervical Biopsy                  | 57500        | Biopsy of the cervix, single or multiple                                                         |
+|                                  | 57455        | Colposcopy of the cervix including upper/adjacent vagina; with biopsy(s) of the cervix           |
+| Cervical Cone Biopsy             | 57520        | Conization of cervix, with or without fulguration, with or without dilation and curettage, with or without repair; cold knife or laser |
+| LEEP (Loop Electrosurgical Excision Procedure) | 57522 | Loop electrode excision procedure                                                               |
+| Cryotherapy                      | 57511        | Cryosurgery of the cervix; initial or subsequent                                                 |
+| Hysterectomy                     | 58150        | Total abdominal hysterectomy (corpus and cervix), with or without removal of tube(s), with or without removal of ovary(s) |
+|                                  | 58260        | Vaginal hysterectomy                                                                             |
+
+### Screening Results (SNOMED CT and ICD-10 Codes)
+
+| **Result**                       | **Code Type** | **Code**       | **Description**                                                |
+|----------------------------------|---------------|----------------|----------------------------------------------------------------|
+| Insufficient/Inadequate          | SNOMED CT     | 261091000000105| Inadequate specimen                                            |
+| NILM (Negative for Intraepithelial Lesion or Malignancy) | SNOMED CT | 428763004      | NILM (Negative for Intraepithelial Lesion or Malignancy)       |
+| ASC-US (Atypical Squamous Cells of Undetermined Significance) | SNOMED CT | 33791000119105 | ASC-US (Atypical Squamous Cells of Undetermined Significance) |
+| LSIL (Low-Grade Squamous Intraepithelial Lesion) | SNOMED CT | 35901000119100 | LSIL (Low-Grade Squamous Intraepithelial Lesion)              |
+| ASC-H (Atypical Squamous Cells cannot exclude HSIL) | SNOMED CT | 33786000119102 | ASC-H (Atypical Squamous Cells cannot exclude HSIL)           |
+| HSIL (High-Grade Squamous Intraepithelial Lesion) | SNOMED CT | 13602000119105 | HSIL (High-Grade Squamous Intraepithelial Lesion)             |
+| SCC (Squamous Cell Carcinoma)    | SNOMED CT     | 16356006       | Squamous Cell Carcinoma                                       |
+| HPV Positive                     | SNOMED CT     | 278300000      | HPV Positive                                                  |
+| HPV Negative                     | SNOMED CT     | 278290009      | HPV Negative                                                  |
+
+
 ## Meeting Notes
 
 #### 04/03/24: 
