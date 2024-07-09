@@ -23,9 +23,8 @@
   - Identify variables required for Cervical Screening Pilot **(ATHENA)**
   - Determine which of these are in our data set **(?)**
 
-> “Let's start at the very beginning, a very good place to start” ~ Fraulein Maria
-
 ## Start-up Tasks
+> “Let's start at the very beginning, a very good place to start” ~ Fraulein Maria
 1. Watch [OHDSI Community Call [4/16/24]](https://www.youtube.com/watch?v=-Wovqpm7Cdc) introducing ARES and DataQualityDashboard (DQD)
 2. Set up R environment according to [HADES R Setup Guide](https://ohdsi.github.io/Hades/rSetup.html)
 3. Follow [DQD installation guide](https://ohdsi.github.io/DataQualityDashboard/#installation)
@@ -104,6 +103,7 @@
 ## Meeting Notes
 
 ### 04/03/24
+- Antendees: JP, RS, SM
 - Discussed initial README.md and documentation strategy
 - Discussed OHDSI software tools that map to each of our objectives
 - Action items:
@@ -113,4 +113,5 @@
   - **@jacobmpeters:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
 
 ### 04/09/24
+- Antendees: JP, RS, SM
 - Meeting notes to be added...
