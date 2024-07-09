@@ -5,7 +5,7 @@
 - [Start-up Tasks](#start-up-tasks)
 - [Data Tasks](#data-tasks)
 - [Investigative Tasks](#investigative-tasks)
-- [Low-Hanging Fruit](#low-hanging-fruit)
+- [Tasks for Soyoun](#tasks-for-soyoun)
 - [Links](#links)
 - [Tutorials](#tutorials)
 - [Cervical Cancer Screening Procedures and Results](#cervical-cancer-screening-procedures-and-results)
@@ -41,7 +41,7 @@
 1. Compile list of Cervical Cancer-related concepts in CDM
 2. Compile list of those concepts also present in HP data
 
-## Low-Hanging Fruit for @moonsoyoun
+## Tasks for Soyoun
 1. SQL: Count of records `n_records` per `person_id` for each table. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
 2. R: Use counts to generate a histogram. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
 
