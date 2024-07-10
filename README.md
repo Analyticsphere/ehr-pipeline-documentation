@@ -128,7 +128,7 @@
   - JP:
     - Demonstrated ATLAS
     - Discussed successes/troubles with DatabaseConnector
-    - Discussed codes for cervical screenings and results [detailed in tables above]
+    - Discussed codes for cervical screenings and results detailed in [tables above](https://github.com/Analyticsphere/ehr-pilot/edit/main/README.md#cervical-cancer-screening-procedures-and-results)
 - Action Items:
   - **RS:** Check if the concepts in the tables above are in our data set.
   - **SM:**
