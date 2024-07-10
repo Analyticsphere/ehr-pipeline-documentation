@@ -109,18 +109,31 @@
 - Discussed OHDSI software tools that map to each of our objectives
 - Action items:
   - **everyone:** Familiarize ourselves with the CDM/OHDSI documentation and tools.
-  - **@rebexxx:** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1) Add Connect_ID's to all CDM tables from HP
-  - **@moonsoyoun:** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) Generate counts of records per person for each table. Make histogram.
-  - **@jacobmpeters:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
+  - **RS:** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1) Add Connect_ID's to all CDM tables from HP **[DONE]**
+  - **MS:**
+    - [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) Generate counts of records per person for each table. **[DONE]**
+    - Make histogram. **[DONE]** 
+  - **JP:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
 
 ### 04/09/24
 - Antendees: JP, RS, SM
 - Recapped progress from 4/3
-- Action Items:
-  - RS: Check if the concepts in the tables above are in our data set.
+  - RS:
+    - added Connect_ID to each CDM table, saved well-documented query. Suggested formalizing progress with scheduled query when loading data.
+    - RS noted that the death table has individuals that lack a Connect_ID in the `death` table
+    - Need to confirm that identify which individuals lack Connect_ID's and confirm that those with Connect_ID's are consented, etc. [#4](https://github.com/Analyticsphere/ehr-pilot/issues/5)
   - SM:
+    - Connected to BQ from R (after much permissioning/authentication troubleshooting).
+    - Generated histograms of record counts per participant for each table.
+  - JP:
+    - Demonstrated ATLAS
+    - Discussed successes/troubles with DatabaseConnector
+    - Discussed codes for cervical screenings and results [detailed in tables above]
+- Action Items:
+  - **RS:** Check if the concepts in the tables above are in our data set.
+  - **SM:**
     - Meet with Rebecca
     - Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
-  - JP:
+  - **JP:**
     - Determine why DatabaseConnector doesn't point to a specific project
     - Continue working on getting ACHILLES, DQD, ARES and ATLAS running
