@@ -118,7 +118,9 @@
 - Recapped progress from 4/3
 - Action Items:
   - RS: Check if the concepts in the tables above are in our data set.
-  - SM: Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
+  - SM:
+    - Meet with Rebecca
+    - Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
   - JP:
     - Determine why DatabaseConnector doesn't point to a specific project
     - Continue working on getting ACHILLES, DQD, ARES and ATLAS running
