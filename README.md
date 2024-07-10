@@ -130,7 +130,7 @@
     - Discussed successes/troubles with DatabaseConnector
     - Discussed codes for cervical screenings and results detailed in [tables above](https://github.com/Analyticsphere/ehr-pilot/edit/main/README.md#cervical-cancer-screening-procedures-and-results)
 - Action Items:
-  - **RS:** Check if the concepts in the tables above are in our data set.
+  - **RS:** Check if the Cervical screening concepts are in HP EHR data set.
   - **SM:**
     - Meet with Rebecca
     - Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
