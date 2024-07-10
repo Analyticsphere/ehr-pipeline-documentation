@@ -2,14 +2,9 @@
 # reference: https://ohdsi.github.io/Ares/
 
 # ToDo: 
-#   - Add "ares" to .gitignore file to avoid accidental sharing of data via GH
+#   x Add "ares" to .gitignore file to avoid accidental sharing of data via GH 
 #   - Set up DatabaseConnector driver: 
 #       - https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
-#   - Change configuration to something appropriate for Connect Data
-#   - Review DatabaseConnector docs to understand connection to BigQuery
-#       - https://ohdsi.github.io/DatabaseConnector/
-#   - Figure out "server" and "driver"
-#   - Ensure that ARES "website" is served locally, not on internet!
 
 # Install dependencies
 library(DatabaseConnector)
@@ -20,27 +15,39 @@ remotes::install_github("OHDSI/Achilles")
 # Configure
 aresDataRoot          <- "/ehr-pilot/ares/data"
 cdmVersion            <- "5.3"
-cdmDatabaseSchema     <- "ehr"
-resultsDatabaseSchema <- "ehr_analyses"
-cdmSourceName         <- "source_name"
+cdmDatabaseSchema     <- "nih-nci-dceg-connect-prod-6d04.ehr"
+resultsDatabaseSchema <- "ohdsi"
+cdmSourceName         <- "nih-nci-dceg-connect-dev"
 
-# Set connection details
-dbms         <- "bigquery"
-server       <- "localhost"         
-user         <- "root"              
-password     <- Sys.getenv("password")
+# Specify database parameters
+project_id <- "nih-nci-dceg-connect-prod-6d04"
+dataset    <- "ehr"
 
 # Set up driver and environment variable using these instructions:
 # https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
 pathToDriver <- Sys.getenv("DATABASECONNECTOR_JAR_FOLDER")
 
-# Configure connection
+# Define the JDBC URL
+# ref: https://www.progress.com/tutorials/jdbc/a-complete-guide-for-google-bigquery-authentication
+
+jdbc_url <- glue::glue(
+  "jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;",
+  "OAuthType=2;",
+  "ProjectID={project_id};",
+  "DefalutDataset={dataset};",
+  "OAuthAccessToken={token$auth_token$credentials$access_token};")
+
+# Set the path to the directory containing your BigQuery JDBC driver JAR file
+# ref: https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
+jdbc_driver_path <- "/Users/petersjm/jdbcDrivers"
+
+# Create a connection details object
 connectionDetails <- DatabaseConnector::createConnectionDetails(
-  dbms     = dbms,
-  server   = server,
-  user     = user
-  # ,password = password
-  # ,pathToDriver = pathToDriver
+  dbms = "bigquery",
+  connectionString = jdbc_url,
+  pathToDriver = jdbc_driver_path,
+  user = "",
+  password = ""
 )
 
 # Run Achilles
