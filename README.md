@@ -59,7 +59,7 @@
   - [_DataQualityDashboard_](https://github.com/OHDSI/DataQualityDashboard)
   - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
   - [_EHR Pilot Study_](https://nih.app.box.com/file/1048412458673)
-  
+  - [_EHR OMOP Data Definitions_](https://nih.app.box.com/file/1488458296044)
 
 ## Tutorials
 - [Tools to Evaluate ETL](https://www.youtube.com/watch?v=-Wovqpm7Cdc) - ACHILLES, ARES, DQD
