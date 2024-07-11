@@ -58,6 +58,8 @@
   - [_ARES_](https://ohdsi.github.io/Ares/)
   - [_DataQualityDashboard_](https://github.com/OHDSI/DataQualityDashboard)
   - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
+  - [_EHR Pilot Study_](https://nih.app.box.com/file/1048412458673)
+  
 
 ## Tutorials
 - [Tools to Evaluate ETL](https://www.youtube.com/watch?v=-Wovqpm7Cdc) - ACHILLES, ARES, DQD
