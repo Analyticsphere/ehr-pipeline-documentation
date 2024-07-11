@@ -46,7 +46,7 @@
 
 ## Links
 - Our documentation:
-  - [_EHR Pilot Meeting_ presentation](https://nih.app.box.com/file/1048412458673)
+  - [EHR WG presentation](https://nih.app.box.com/file/1048412458673)
   - [CDM Document provided by HP](https://nih.app.box.com/file/1488458296044)
 - CDM documentation:
   - [_OMOP CDM v5.3_ documentation](https://ohdsi.github.io/CommonDataModel/cdm53.html#person)
@@ -105,7 +105,14 @@
 
 ## Meeting Notes
 
-### 04/03/24
+### 07/01/24 Kick-off
+- Attendees: NG, JP, RS, SM
+- NG discussed [EHR WG presentation](https://nih.app.box.com/file/1048412458673)
+- Action items from NG:
+  - Determine number of records per participant for each table
+  - Identify concepts in data relavent to cervical cancer
+     
+### 07/03/24
 - Antendees: JP, RS, SM
 - Discussed initial README.md and documentation strategy
 - Discussed OHDSI software tools that map to each of our objectives
@@ -117,7 +124,7 @@
     - Make histogram. **[DONE]** 
   - **JP:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
 
-### 04/09/24
+### 07/09/24
 - Antendees: JP, RS, SM
 - Recapped progress from 4/3
   - RS:
