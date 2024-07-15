@@ -2,9 +2,6 @@
 library(bigrquery)
 library(DatabaseConnector)
 library(DBI)
-library(remotes)
-remotes::install_github("OHDSI/DataQualityDashboard")
-remotes::install_github("OHDSI/Achilles")
 
 # Specify database parameters
 project_id <- "nih-nci-dceg-connect-prod-6d04"
@@ -18,12 +15,21 @@ token <- bigrquery::bq_token()
 
 # Define the JDBC URL
 # ref: https://www.progress.com/tutorials/jdbc/a-complete-guide-for-google-bigquery-authentication
+# ref: https://github.com/jdposada/BQJdbcConnectionStringR
 jdbc_url <- glue::glue(
   "jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;",
-  "OAuthType=2;",
-  "ProjectID={project_id};",
+  "ProjectId={project_id};",
+  "DatasetId={dataset};",
   "DefalutDataset={dataset};",
+  "OAuthType=2;",
+  "EnableSession=1;",
   "OAuthAccessToken={token$auth_token$credentials$access_token};")
+  # "Timeout=1000;",
+  # "AllowLargeResults=0;",
+  # "EnableHighThroughputAPI=1;",
+  # "UseQueryCache=1;",
+  # "LogLevel=0;",
+  # "FilterTablesOnDefaultDataset=1"
 
 # Set the path to the directory containing your BigQuery JDBC driver JAR file
 # ref: https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
@@ -46,8 +52,8 @@ tables <- bigrquery::dbListTables(conn)
 print(tables)
 
 # Test query
-sql <- glue::glue("SELECT * FROM `{project_id}.{dataset}.person` LIMIT 10")
-person_data <- dbGetQuery(conn, sql)
+sql <- glue::glue("SELECT CONNECT_ID FROM `{project_id}.{dataset}.person` WHERE CONNECT_ID IS NOT NULL LIMIT 10")
+person_data <- DBI::dbGetQuery(conn, sql)
 print(person_data)
 
 # Close the connection
