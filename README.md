@@ -32,7 +32,7 @@
 5. Install ARES: [ARES installation guide](https://ohdsi.github.io/Ares/)
 
 ## Data Tasks
-1. Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners` **@rebexxx** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1)
+1. ~~Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners` **@rebexxx** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1)~~ **[DONE]**
 2. Run DQD, ACHILLES on HP data and visualize on ARES using `generate_ares_data.R` **@jacobmpeters** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3)
 3. Share results with Nicole
 
@@ -41,12 +41,12 @@
 2. Compile list of those concepts also present in HP data
 
 ## Tasks for Soyoun
-1. SQL: Count of records `n_records` per `person_id` for each table. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
+1. ~~SQL: Count of records `n_records` per `person_id` for each table. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)~~ **[DONE]**
 2. R: Use counts to generate a histogram. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
 
 ## Links
 - Our documentation:
-  - [_EHR Pilot Meeting_ presentation](https://nih.app.box.com/file/1048412458673)
+  - [EHR WG presentation](https://nih.app.box.com/file/1048412458673)
   - [CDM Document provided by HP](https://nih.app.box.com/file/1488458296044)
 - CDM documentation:
   - [_OMOP CDM v5.3_ documentation](https://ohdsi.github.io/CommonDataModel/cdm53.html#person)
@@ -58,10 +58,13 @@
   - [_ARES_](https://ohdsi.github.io/Ares/)
   - [_DataQualityDashboard_](https://github.com/OHDSI/DataQualityDashboard)
   - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
+  - [_EHR Pilot Study_](https://nih.app.box.com/file/1048412458673)
+  - [_EHR OMOP Data Definitions_](https://nih.app.box.com/file/1488458296044)
 
 ## Tutorials
 - [Tools to Evaluate ETL](https://www.youtube.com/watch?v=-Wovqpm7Cdc) - ACHILLES, ARES, DQD
 - [DevCon 2023 Workshop: Introducing Broadsea 3.0](https://www.youtube.com/watch?v=CNlsZzY7VrM)
+- [ATLAS Tutorials - YouTube Playlist](https://www.youtube.com/playlist?list=PLpzbqK7kvfeUXjgnpNMFoff3PDOwv61lZ)
 
 # Cervical Cancer Screening Procedures and Results
 
@@ -102,16 +105,44 @@
 
 ## Meeting Notes
 
-### 04/03/24
+### 07/01/24 Kick-off
+- Attendees: NG, JP, RS, SM
+- NG discussed [EHR WG presentation](https://nih.app.box.com/file/1048412458673)
+- Action items from NG:
+  - Determine number of records per participant for each table
+  - Identify concepts in data relavent to cervical cancer
+     
+### 07/03/24
 - Antendees: JP, RS, SM
 - Discussed initial README.md and documentation strategy
 - Discussed OHDSI software tools that map to each of our objectives
 - Action items:
   - **everyone:** Familiarize ourselves with the CDM/OHDSI documentation and tools.
-  - **@rebexxx:** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1) Add Connect_ID's to all CDM tables from HP
-  - **@moonsoyoun:** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) Generate counts of records per person for each table. Make histogram.
-  - **@jacobmpeters:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
+  - **RS:** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1) Add Connect_ID's to all CDM tables from HP **[DONE]**
+  - **MS:**
+    - [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) Generate counts of records per person for each table. **[DONE]**
+    - Make histogram. **[DONE]** 
+  - **JP:** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3) Get [`generate_ares_data.R`](https://github.com/Analyticsphere/ehr-pilot/blob/main/generate_ares_data.R) up and running with our BigQuery data.
 
-### 04/09/24
+### 07/09/24
 - Antendees: JP, RS, SM
-- Meeting notes to be added...
+- Recapped progress from 4/3
+  - RS:
+    - added Connect_ID to each CDM table, saved well-documented query. Suggested formalizing progress with scheduled query when loading data.
+    - RS noted that the death table has individuals that lack a Connect_ID in the `death` table
+    - Need to confirm that identify which individuals lack Connect_ID's and confirm that those with Connect_ID's are consented, etc. [#4](https://github.com/Analyticsphere/ehr-pilot/issues/5)
+  - SM:
+    - Connected to BQ from R (after much permissioning/authentication troubleshooting).
+    - Generated histograms of record counts per participant for each table.
+  - JP:
+    - Demonstrated ATLAS
+    - Discussed successes/troubles with DatabaseConnector
+    - Discussed codes for cervical screenings and results detailed in [tables above](https://github.com/Analyticsphere/ehr-pilot/edit/main/README.md#cervical-cancer-screening-procedures-and-results)
+- Action Items:
+  - **RS:** Check if the Cervical screening concepts are in HP EHR data set.
+  - **SM:**
+    - Meet with Rebecca
+    - Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
+  - **JP:**
+    - Determine why DatabaseConnector doesn't point to a specific project
+    - Continue working on getting ACHILLES, DQD, ARES and ATLAS running
