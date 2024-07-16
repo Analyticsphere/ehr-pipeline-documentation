@@ -33,7 +33,7 @@
 
 ## Data Tasks
 1. ~~Convert PERSON_ID to Connect_ID using `link_file.csv` in GCS bucket `ehr_healthpartners` **@rebexxx** [#1](https://github.com/Analyticsphere/ehr-pilot/issues/1)~~ **[DONE]**
-2. Run DQD, ACHILLES on HP data and visualize on ARES using `generate_ares_data.R` **@jacobmpeters** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3)
+2. ~~Run DQD, ACHILLES on HP data and visualize on ARES using `generate_ares_data.R` **@jacobmpeters** [#3](https://github.com/Analyticsphere/ehr-pilot/issues/3)~~ **[DONE]**
 3. Share results with Nicole
 
 ## Investigative Tasks
@@ -42,7 +42,7 @@
 
 ## Tasks for Soyoun
 1. ~~SQL: Count of records `n_records` per `person_id` for each table. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)~~ **[DONE]**
-2. R: Use counts to generate a histogram. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
+2. ~~R: Use counts to generate a histogram. **@moonsoyoun** [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)~~ **[DONE]**
 
 ## Links
 - Our documentation:
@@ -65,6 +65,32 @@
 - [Tools to Evaluate ETL](https://www.youtube.com/watch?v=-Wovqpm7Cdc) - ACHILLES, ARES, DQD
 - [DevCon 2023 Workshop: Introducing Broadsea 3.0](https://www.youtube.com/watch?v=CNlsZzY7VrM)
 - [ATLAS Tutorials - YouTube Playlist](https://www.youtube.com/playlist?list=PLpzbqK7kvfeUXjgnpNMFoff3PDOwv61lZ)
+
+## OHDSI Tools Workflow
+
+```mermaid
+flowchart LR
+    subgraph Atlas
+        CDS[Compare Data Sources]
+        EXP[Explore Concepts]
+        CON[Construct Concept Sets]
+        COH[Define Cohorts]
+        ANA[Perform Epidemilogical Analyses]
+    end
+
+    subgraph Hades
+        HCDS[Compare Data Sources]
+        HEXP[Explore Concepts]
+        HCON[Construct Concept Sets]
+        HCOH[Define Cohorts]
+        HANA[Perform Epidemilogical Analyses]
+    end
+    BQ <--> DatabaseConnector
+    DatabaseConnector --connection--> Achilles & DataqualityDashboard
+    Achilles & DataqualityDashboard --results--> Atlas & Hades
+    Atlas <--UI--> Epidemiologist
+    Hades <--code--> Analyst
+```
 
 # Cervical Cancer Screening Procedures and Results
 
