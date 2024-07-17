@@ -11,9 +11,6 @@
 - [Cervical Cancer Screening Procedures and Results](#cervical-cancer-screening-procedures-and-results)
   - [Screening Procedures (CPT Codes)](#screening-procedures-cpt-codes)
   - [Screening Results (SNOMED CT and ICD-10 Codes)](#screening-results-snomed-ct-and-icd-10-codes)
-- [Meeting Notes](#meeting-notes)
-  - [04/03/24](#040324)
-  - [04/09/24](#040924)
 
 ## Objectives
 - Use out-of-the-box OHDSI Tools to:
@@ -60,6 +57,8 @@
   - [_DatabaseConnector_](https://ohdsi.github.io/DatabaseConnector/articles/DbiAndDbplyr.html)
   - [_EHR Pilot Study_](https://nih.app.box.com/file/1048412458673)
   - [_EHR OMOP Data Definitions_](https://nih.app.box.com/file/1488458296044)
+- Parallel Projects:
+  - [`allofus` R package](https://roux-ohdsi.github.io/allofus/)
 
 ## Tutorials
 - [Tools to Evaluate ETL](https://www.youtube.com/watch?v=-Wovqpm7Cdc) - ACHILLES, ARES, DQD
