@@ -170,6 +170,12 @@ Diabetes Questions:
 | Random Blood Glucose Level        | 233004004                   | 3004502         | Random blood glucose level                                                                  |
 | Diabetes Self-Management Training | G0108                       | 40757182        | Diabetes outpatient self-management training services, individual   session, per 30 minutes |
 
+#### Observation Codes (LOINC)
+| Observation                 | LOINC Code | OMOP Concept ID | Description                                                |
+|-----------------------------|------------|-----------------|------------------------------------------------------------|
+| HbA1c Level                 | 4548-4     | 3004410         | Hemoglobin A1c/Hemoglobin.total in Blood                   |
+| Fasting Blood Glucose Level | 1558-6     | 3004501         | Glucose [Mass/volume] in Serum or Plasma --8 hours fasting |
+| Random Blood Glucose Level  | 2339-0     | 3004502         | Glucose [Mass/volume] in Serum or Plasma                   |
 #### How to Obtain Variables
 
 ## Meeting Notes
