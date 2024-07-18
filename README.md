@@ -176,6 +176,7 @@ Diabetes Questions:
 | HbA1c Level                 | 4548-4     | 3004410         | Hemoglobin A1c/Hemoglobin.total in Blood                   |
 | Fasting Blood Glucose Level | 1558-6     | 3004501         | Glucose [Mass/volume] in Serum or Plasma --8 hours fasting |
 | Random Blood Glucose Level  | 2339-0     | 3004502         | Glucose [Mass/volume] in Serum or Plasma                   |
+
 #### How to Obtain Variables
 
 ## Meeting Notes
