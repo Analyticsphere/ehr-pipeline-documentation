@@ -157,12 +157,16 @@ Diabetes Questions:
 | 4041725         | 167096006 | Plasma   fasting glucose measurement | Procedure        | Standard     | Valid    | Measurement | SNOMED |
 | 4041723         | 167087006 | Serum   fasting glucose measurement  | Procedure        | Standard     | Valid    | Measurement | SNOMED |
 
+## Diabetes-Related Codes in Connect Data Dictionary
+
 | conceptId | Current Source Question                                                                                                                                 | conceptId | Current Question Text                                                                           | conceptId | Current Format/Value |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|-------------------------------------------------------------------------------------------------|-----------|----------------------|
 | 900541533 | Thyroid, Diabetes, Graves - Has a doctor or other health professional ever told you that you have or had any of these conditions? Select all that apply | 158044532 | Diabetes                                                                                        |           |                      |
 |           |                                                                                                                                                         | 494032093 | Which type of diabetes did a doctor or other health professional tell you that you have or had? | 146477090 | 0 = Type 1           |
 | 301679110 | How old were you when a doctor or other health professional first told you that you have or had Diabetes?                                               | 206625031 | Age at diagnosis                                                                                |           |                      |
 | 301679110 | How old were you when a doctor or other health professional first told you that you have or had Diabetes?                                               | 261863326 | Year at diagnosis                                                                               |           |                      |
+
+## Diabetes-Related Medication Codes in Connect Data Dictionary
 
 | conceptId | Current Source Question                                                                                                                                             | conceptId | Current Question Text                                                                                                                             |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
