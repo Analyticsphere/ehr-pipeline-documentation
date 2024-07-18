@@ -136,6 +136,42 @@ Diabetes Questions:
     - Look at Hemoglobin A1C results
     - Look at medication exposures: metformin, insulin, etc.
 
+## Diabetes-Related Codes
+
+#### Diagnosis Codes (ICD-10)
+| Diagnosis                         | ICD-10 Code | OMOP Concept ID | Description                       |
+|-----------------------------------|-------------|-----------------|-----------------------------------|
+| Type 1 Diabetes Mellitus          | E10         | 201254          | Type 1 diabetes mellitus          |
+| Type 2 Diabetes Mellitus          | E11         | 201820          | Type 2 diabetes mellitus          |
+| Other Specified Diabetes Mellitus | E13         | 443238          | Other specified diabetes mellitus |
+| Gestational Diabetes              | O24.4       | 201535          | Gestational diabetes mellitus     |
+
+#### Diagnosis Codes (SNOMED CT)
+| Diagnosis                         | SNOMED CT Code | OMOP Concept ID | Description                       |
+|-----------------------------------|----------------|-----------------|-----------------------------------|
+| Type 1 Diabetes Mellitus          | 46635009       | 201820          | Type 1 diabetes mellitus          |
+| Type 2 Diabetes Mellitus          | 44054006       | 201820          | Type 2 diabetes mellitus          |
+| Other Specified Diabetes Mellitus | 46635009       | 443238          | Other specified diabetes mellitus |
+| Gestational Diabetes              | 199225006      | 40482801        | Gestational diabetes mellitus     |
+
+#### Procedure Codes (CPT)
+| Procedure                         | CPT Code | OMOP Concept ID | Description                                                                                                     |
+|-----------------------------------|----------|-----------------|-----------------------------------------------------------------------------------------------------------------|
+| Hemoglobin A1c (HbA1c) Test       | 83036    | 3004410         | Hemoglobin; glycosylated (A1C)                                                                                  |
+| Glucose Tolerance Test            | 82951    | 3022409         | Glucose; tolerance test (GTT), three specimens                                                                  |
+| Insulin Injection                 | 96372    | 2108239         | Therapeutic, prophylactic, or diagnostic injection (specify substance or   drug); subcutaneous or intramuscular |
+| Diabetes Self-Management Training | G0108    | 40757182        | Diabetes outpatient self-management training services, individual   session, per 30 minutes                     |
+
+#### Observation Codes (SNOMED CT)
+| Observation                       | SNOMED CT Code              | OMOP Concept ID | Description                                                                                 |
+|-----------------------------------|-----------------------------|-----------------|---------------------------------------------------------------------------------------------|
+| HbA1c Level                       | 43396009                    | 3004410         | Hemoglobin A1c level                                                                        |
+| Fasting Blood Glucose Level       | fasting blood glucose level | 3004501         | Fasting blood glucose level                                                                 |
+| Random Blood Glucose Level        | 233004004                   | 3004502         | Random blood glucose level                                                                  |
+| Diabetes Self-Management Training | G0108                       | 40757182        | Diabetes outpatient self-management training services, individual   session, per 30 minutes |
+
+#### How to Obtain Variables
+
 ## Meeting Notes
 see [MEETING_NOTES.md](https://github.com/Analyticsphere/ehr-pilot/blob/main/MEETING_NOTES.md)
 
