@@ -127,6 +127,14 @@ flowchart LR
 | HPV Positive                                                    | SNOMED CT | 278300000       | 373121          | HPV Positive                                                  |
 | HPV Negative                                                    | SNOMED CT | 278290009       | 373118          | HPV Negative                                                  |
 
+# Diabetes prevalence: Cross-validate EHR and Self-reported Data
+
+Diabetes Questions:
+  - _Are EHR data and self-reported data aligned/as expected?_
+    - Define concept sets for EHR and surveys
+    - Compare self-reported incidence rates to EHR rates
+    - Look at Hemoglobin A1C results
+    - Look at medication exposures: metformin, insulin, etc.
 
 ## Meeting Notes
 see [MEETING_NOTES.md](https://github.com/Analyticsphere/ehr-pilot/blob/main/MEETING_NOTES.md)
