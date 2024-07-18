@@ -34,28 +34,33 @@
     - Discussed successes/troubles with DatabaseConnector
     - Discussed codes for cervical screenings and results detailed in [tables above](https://github.com/Analyticsphere/ehr-pilot/edit/main/README.md#cervical-cancer-screening-procedures-and-results)
 - Action Items:
-  - **RS:** Check if the Cervical screening concepts are in HP EHR data set.
+  - **RS:** Check if the Cervical screening concepts are in HP EHR data set. **[DONE]**
   - **SM:**
-    - Meet with Rebecca
-    - Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2)
+    - Meet with Rebecca **[DONE]**
+    - Generate PDF with histograms for each table. [#2](https://github.com/Analyticsphere/ehr-pilot/issues/2) **[DONE]**
   - **JP:**
-    - Determine why DatabaseConnector doesn't point to a specific project
-    - Continue working on getting ACHILLES, DQD, ARES and ATLAS running
+    - Determine why DatabaseConnector doesn't point to a specific project **[DONE]**
+    - Continue working on getting ACHILLES, DQD, ARES and ATLAS running **[ONGOING]**
 
 ### 07/09/24
   - Atendees: JP, RS, SM
-  - Recapped progress on ATLAS
-  - Recapped progress on summary of table distributions
-  - Action:
-    - RS & SM to send summary email to Nicole reguarding initial analysis of table distributions.
-    - RS look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
-    - Soyoun update from EHR Working Group meeting:
+  - JP Recapped progress on DatabaseConnector and Achilles
+  - RS & SM Recapped progress on summary of table distributions - Looked great!
+  - SM update from EHR Working Group meeting:
       - Cervical screening too difficult for pilot for now
       - Diabetes:
-        - Are EHR data and self-reported data aligned/as expected?
-          - Identify EHR concepts JP
-          - Identify Connect concepts in Background and Overall Health Survey [Module 1]
-          - If time, look for concepts in Medications Survey related to diabetes medications [Module X]
-            - Data dictionary: https://github.com/Analyticsphere/ConnectMasterAndSurveyCombinedDataDictionary
-        - Look at Hemoglobin A1C - test result
-          - JP to generate initial list of concepts
+        - __Are EHR data and self-reported data aligned/as expected?__
+          - Define concept sets for EHR and surveys   
+          - Compare self-reported incidence rates to EHR rates
+          - Look at Hemoglobin A1C results
+          - Look at medication exposures: metformin, insulin, etc.
+          
+  - Action:
+    - **RS** & **SM** to send summary email to Nicole reguarding initial analysis of table distributions.
+    - **RS** to look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
+    - **JP** Identify EHR concepts and document in README
+    - **SM** Identify Connect concepts in Background and Overall Health Survey [Module 1]
+    - **SM** If time, look for concepts in Medications Survey related to diabetes medications [Module X]
+      - examples: insulin, metformin, etc.
+      - [Data dictionary](https://github.com/Analyticsphere/ConnectMasterAndSurveyCombinedDataDictionary)
+    - **JP** to generate initial list of concepts for Hemoglobin A1C in CDM tables
