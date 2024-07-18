@@ -41,3 +41,21 @@
   - **JP:**
     - Determine why DatabaseConnector doesn't point to a specific project
     - Continue working on getting ACHILLES, DQD, ARES and ATLAS running
+
+### 07/09/24
+  - Atendees: JP, RS, SM
+  - Recapped progress on ATLAS
+  - Recapped progress on summary of table distributions
+  - Action:
+    - RS & SM to send summary email to Nicole reguarding initial analysis of table distributions.
+    - RS look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
+    - Soyoun update from EHR Working Group meeting:
+      - Cervical screening too difficult for pilot for now
+      - Diabetes:
+        - Are EHR data and self-reported data aligned/as expected?
+          - Identify EHR concepts JP
+          - Identify Connect concepts in Background and Overall Health Survey [Module 1]
+          - If time, look for concepts in Medications Survey related to diabetes medications [Module X]
+            - Data dictionary: https://github.com/Analyticsphere/ConnectMasterAndSurveyCombinedDataDictionary
+        - Look at Hemoglobin A1C - test result
+          - JP to generate initial list of concepts
