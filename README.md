@@ -138,42 +138,24 @@ Diabetes Questions:
 
 ## Diabetes-Related Codes
 
-#### Diagnosis Codes (ICD-10)
-| Diagnosis                         | ICD-10 Code | OMOP Concept ID | Description                       |
-|-----------------------------------|-------------|-----------------|-----------------------------------|
-| Type 1 Diabetes Mellitus          | E10         | 201254          | Type 1 diabetes mellitus          |
-| Type 2 Diabetes Mellitus          | E11         | 201820          | Type 2 diabetes mellitus          |
-| Other Specified Diabetes Mellitus | E13         | 443238          | Other specified diabetes mellitus |
-| Gestational Diabetes              | O24.4       | 201535          | Gestational diabetes mellitus     |
-
-#### Diagnosis Codes (SNOMED CT)
-| Diagnosis                         | SNOMED CT Code | OMOP Concept ID | Description                       |
-|-----------------------------------|----------------|-----------------|-----------------------------------|
-| Type 1 Diabetes Mellitus          | 46635009       | 201820          | Type 1 diabetes mellitus          |
-| Type 2 Diabetes Mellitus          | 44054006       | 201820          | Type 2 diabetes mellitus          |
-| Other Specified Diabetes Mellitus | 46635009       | 443238          | Other specified diabetes mellitus |
-| Gestational Diabetes              | 199225006      | 40482801        | Gestational diabetes mellitus     |
-
-#### Procedure Codes (CPT)
-| Procedure                         | CPT Code | OMOP Concept ID | Description                                                                                                     |
-|-----------------------------------|----------|-----------------|-----------------------------------------------------------------------------------------------------------------|
-| Hemoglobin A1c (HbA1c) Test       | 83036    | 3004410         | Hemoglobin; glycosylated (A1C)                                                                                  |
-| Glucose Tolerance Test            | 82951    | 3022409         | Glucose; tolerance test (GTT), three specimens                                                                  |
-
-#### Observation Codes (SNOMED CT)
-| Observation                       | SNOMED CT Code              | OMOP Concept ID | Description                                                                                 |
-|-----------------------------------|-----------------------------|-----------------|---------------------------------------------------------------------------------------------|
-| HbA1c Level                       | 43396009                    | 3004410         | Hemoglobin A1c level                                                                        |
-| Fasting Blood Glucose Level       | fasting blood glucose level | 3004501         | Fasting blood glucose level                                                                 |
-| Random Blood Glucose Level        | 233004004                   | 3004502         | Random blood glucose level                                                                  |
-| Diabetes Self-Management Training | G0108                       | 40757182        | Diabetes outpatient self-management training services, individual   session, per 30 minutes |
-
-#### Observation Codes (LOINC)
-| Observation                 | LOINC Code | OMOP Concept ID | Description                                                |
-|-----------------------------|------------|-----------------|------------------------------------------------------------|
-| HbA1c Level                 | 4548-4     | 3004410         | Hemoglobin A1c/Hemoglobin.total in Blood                   |
-| Fasting Blood Glucose Level | 1558-6     | 3004501         | Glucose [Mass/volume] in Serum or Plasma --8 hours fasting |
-| Random Blood Glucose Level  | 2339-0     | 3004502         | Glucose [Mass/volume] in Serum or Plasma                   |
+| ID              | CODE      | NAME                                 | CLASS            | CONCEPT      | VALIDITY | DOMAIN      | VOCAB  |
+|-----------------|-----------|--------------------------------------|------------------|--------------|----------|-------------|--------|
+|        201820   | 73211009  | Diabetes   mellitus                  | Disorder         | Standard     | Valid    | Condition   | SNOMED |
+| 4024659         | 11687002  | Gestational   diabetes mellitus      | Disorder         | Standard     | Valid    | Condition   | SNOMED |
+| 201254          | 46635009  | Type   1 diabetes mellitus           | Disorder         | Standard     | Valid    | Condition   | SNOMED |
+| 201826          | 44054006  | Type   2 diabetes mellitus           | Disorder         | Standard     | Valid    | Condition   | SNOMED |
+|        45566732 | E13       | Other   specified diabetes mellitus  | ICD10 Hierarchy  | Non-standard | Valid    | Condition   | ICD10  |
+|        40475049 | E10-E14   | Diabetes   mellitus                  | ICD10 SubChapter | Non-standard | Valid    | Condition   | ICD10  |
+|        45534186 | O24       | Diabetes   mellitus in pregnancy     | ICD10 Hierarchy  | Non-standard | Valid    | Condition   | ICD10  |
+| 45566732        | E13       | Other   specified diabetes mellitus  | ICD10 Hierarchy  | Non-standard | Valid    | Condition   | ICD10  |
+| 45576436        | E10       | Type   1 diabetes mellitus           | ICD10 Hierarchy  | Non-standard | Valid    | Condition   | ICD10  |
+| 45571656        | E11       | Type   2 diabetes mellitus           | ICD10 Hierarchy  | Non-standard | Valid    | Condition   | ICD10  |
+|                 |           |                                      |                  |              |          |             |        |
+|        4184637  | 43396009  | Hemoglobin   A1c measurement         | Procedure        | Standard     | Valid    | Measurement | SNOMED |
+|        4012477  | 113076002 | Glucose   tolerance test             | Procedure        | Standard     | Valid    | Measurement | SNOMED |
+|        4156660  | 271062006 | Fasting   blood glucose measurement  | Procedure        | Standard     | Valid    | Measurement | SNOMED |
+| 4041725         | 167096006 | Plasma   fasting glucose measurement | Procedure        | Standard     | Valid    | Measurement | SNOMED |
+| 4041723         | 167087006 | Serum   fasting glucose measurement  | Procedure        | Standard     | Valid    | Measurement | SNOMED |
 
 #### How to Obtain Variables
 
