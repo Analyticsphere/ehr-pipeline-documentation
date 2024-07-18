@@ -159,8 +159,6 @@ Diabetes Questions:
 |-----------------------------------|----------|-----------------|-----------------------------------------------------------------------------------------------------------------|
 | Hemoglobin A1c (HbA1c) Test       | 83036    | 3004410         | Hemoglobin; glycosylated (A1C)                                                                                  |
 | Glucose Tolerance Test            | 82951    | 3022409         | Glucose; tolerance test (GTT), three specimens                                                                  |
-| Insulin Injection                 | 96372    | 2108239         | Therapeutic, prophylactic, or diagnostic injection (specify substance or   drug); subcutaneous or intramuscular |
-| Diabetes Self-Management Training | G0108    | 40757182        | Diabetes outpatient self-management training services, individual   session, per 30 minutes                     |
 
 #### Observation Codes (SNOMED CT)
 | Observation                       | SNOMED CT Code              | OMOP Concept ID | Description                                                                                 |
