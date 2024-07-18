@@ -115,17 +115,17 @@ flowchart LR
 |                                                  | 58260    | 2211348         | Vaginal hysterectomy                                                                                                                     |
 ## Screening Results (SNOMED CT and ICD-10 Codes)
 
-| Result                                                          | Code Type | Code        | OMOP Concept ID | Description                                                   |
-|-----------------------------------------------------------------|-----------|-------------|-----------------|---------------------------------------------------------------|
-| Insufficient/Inadequate                                         | SNOMED CT | 2.61091E+14 | 44804384        | Inadequate specimen                                           |
-| NILM (Negative for Intraepithelial Lesion   or Malignancy)      | SNOMED CT | 428763004   | 4299857         | NILM (Negative for Intraepithelial Lesion or Malignancy)      |
-| ASC-US (Atypical Squamous Cells of   Undetermined Significance) | SNOMED CT | 3.3791E+13  | 4299858         | ASC-US (Atypical Squamous Cells of Undetermined Significance) |
-| LSIL (Low-Grade Squamous Intraepithelial   Lesion)              | SNOMED CT | 3.5901E+13  | 4299859         | LSIL (Low-Grade Squamous Intraepithelial Lesion)              |
-| ASC-H (Atypical Squamous Cells cannot   exclude HSIL)           | SNOMED CT | 3.3786E+13  | 4299860         | ASC-H (Atypical Squamous Cells cannot exclude HSIL)           |
-| HSIL (High-Grade Squamous Intraepithelial   Lesion)             | SNOMED CT | 1.3602E+13  | 4299861         | HSIL (High-Grade Squamous Intraepithelial Lesion)             |
-| SCC (Squamous Cell Carcinoma)                                   | SNOMED CT | 16356006    | 4024666         | Squamous Cell Carcinoma                                       |
-| HPV Positive                                                    | SNOMED CT | 278300000   | 373121          | HPV Positive                                                  |
-| HPV Negative                                                    | SNOMED CT | 278290009   | 373118          | HPV Negative                                                  |
+| Result                                                          | Code Type | Code            | OMOP Concept ID | Description                                                   |
+|-----------------------------------------------------------------|-----------|-----------------|-----------------|---------------------------------------------------------------|
+| Insufficient/Inadequate                                         | SNOMED CT | 261091000000105 | 44804384        | Inadequate specimen                                           |
+| NILM (Negative for Intraepithelial Lesion   or Malignancy)      | SNOMED CT | 428763004       | 4299857         | NILM (Negative for Intraepithelial Lesion or Malignancy)      |
+| ASC-US (Atypical Squamous Cells of   Undetermined Significance) | SNOMED CT | 33791000119105  | 4299858         | ASC-US (Atypical Squamous Cells of Undetermined Significance) |
+| LSIL (Low-Grade Squamous Intraepithelial   Lesion)              | SNOMED CT | 35901000119100  | 4299859         | LSIL (Low-Grade Squamous Intraepithelial Lesion)              |
+| ASC-H (Atypical Squamous Cells cannot   exclude HSIL)           | SNOMED CT | 33786000119102  | 4299860         | ASC-H (Atypical Squamous Cells cannot exclude HSIL)           |
+| HSIL (High-Grade Squamous Intraepithelial   Lesion)             | SNOMED CT | 13602000119105  | 4299861         | HSIL (High-Grade Squamous Intraepithelial Lesion)             |
+| SCC (Squamous Cell Carcinoma)                                   | SNOMED CT | 16356006        | 4024666         | Squamous Cell Carcinoma                                       |
+| HPV Positive                                                    | SNOMED CT | 278300000       | 373121          | HPV Positive                                                  |
+| HPV Negative                                                    | SNOMED CT | 278290009       | 373118          | HPV Negative                                                  |
 
 
 ## Meeting Notes
