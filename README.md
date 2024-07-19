@@ -136,7 +136,7 @@ Diabetes Questions:
     - Look at Hemoglobin A1C results
     - Look at medication exposures: metformin, insulin, etc.
 
-## Diabetes-Related Codes
+## Diabetes-Related OMOP Concepts (from Athena)
 
 | ID              | CODE      | NAME                                 | CLASS            | CONCEPT      | VALIDITY | DOMAIN      | VOCAB  |
 |-----------------|-----------|--------------------------------------|------------------|--------------|----------|-------------|--------|
