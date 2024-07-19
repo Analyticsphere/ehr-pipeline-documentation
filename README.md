@@ -136,7 +136,7 @@ Diabetes Questions:
     - Define concept sets for EHR and surveys
     - Compare self-reported incidence rates to EHR rates
     - Look at Hemoglobin A1C results
-    - Look at medication exposures: metformin, insulin, etc.
+    - Look at medication exposures: oral hypoglycemics(i.e., metformin), insulin, GLP-1 receptor agonists, etc.
 
 ## Diabetes-Related OMOP Concepts (from Athena)
 
