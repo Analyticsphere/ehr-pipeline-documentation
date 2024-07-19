@@ -189,7 +189,6 @@ Diabetes Questions:
 |           |                                                                                                                                                                     | 465635548 | When was the last time you took Insulin?                                                                                                          |
 |           |                                                                                                                                                                     | 556235252 | How many years ago did you last take Insulin?                                                                                                     |
 
-#### How to Obtain Variables
 
 ## Meeting Notes
 see [MEETING_NOTES.md](https://github.com/Analyticsphere/ehr-pilot/blob/main/MEETING_NOTES.md)
