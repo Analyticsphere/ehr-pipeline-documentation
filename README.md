@@ -191,6 +191,19 @@ Diabetes Questions:
 |           |                                                                                                                                                                     | 465635548 | When was the last time you took Insulin?                                                                                                          |
 |           |                                                                                                                                                                     | 556235252 | How many years ago did you last take Insulin?                                                                                                     |
 
+## EHR Vocabularies Reference
+
+| Terminology | Description | Context of Use | Likely CDM Tables |
+|---|---|---|---|
+| ICD-10 | International Classification of Diseases, 10th Revision. A system used by   physicians and other healthcare providers to classify and code all diagnoses,   symptoms, and procedures. | Used for diagnoses and inpatient procedures. | Condition Occurrence, Procedure Occurrence |
+| SNOMED CT | Systematized Nomenclature of Medicine -- Clinical Terms. A comprehensive   clinical terminology covering diseases, clinical findings, and procedures. | Used for clinical terms, including diagnoses and findings. | Condition Occurrence, Observation |
+| CPT | Current Procedural Terminology. A set of medical codes used to report   diagnostic, surgical, and medical procedures. | Used for billing and documentation of procedures. | Procedure Occurrence |
+| LOINC | Logical Observation Identifiers Names and Codes. A universal code system   for identifying laboratory and clinical observations. | Used for lab tests and clinical observations. | Measurement, Observation |
+| RxNorm | A normalized naming system for generic and branded drugs. | Used for identifying medications. | Drug Exposure |
+| HCPCS | Healthcare Common Procedure Coding System. Codes used primarily to   identify products, supplies, and services not included in the CPT codes. | Used for billing of Medicare and other insurance services. | Procedure Occurrence |
+| NDC | National Drug Code. A unique identifier for medications intended for   human use. | Used for identifying drug products. | Drug Exposure |
+| ATC | Anatomical Therapeutic Chemical Classification System. A system used for   the classification of drugs. | Used for drug classification. | Drug Exposure |
+
 
 ## Meeting Notes
 see [MEETING_NOTES.md](https://github.com/Analyticsphere/ehr-pilot/blob/main/MEETING_NOTES.md)
