@@ -129,6 +129,8 @@ flowchart LR
 
 # Diabetes prevalence: Cross-validate EHR and Self-reported Data
 
+> Note from NG: Diabetes would be better as is can be found using SNOMED, LOINC or ICD codes in the condition_occurrence and observation tables.
+
 Diabetes Questions:
   - _Are EHR data and self-reported data aligned/as expected?_
     - Define concept sets for EHR and surveys
