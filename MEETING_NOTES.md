@@ -73,6 +73,7 @@
   - SOURCE_CONCEPT_VALUE is a useful field condition_occurance table
 - Discussed Book of OHDSI documentation on CDM. 
 - Action:
+  - **JP**, **RS** to review soyoun's [poster](https://nih-my.sharepoint.com/:p:/g/personal/moons7_nih_gov/EXsRQ8yfa_ZPib7rXqFk3noB_eDbm-Nzv-jlKGHS4vfFig?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1721840665224&web=1)  
   - **SM** to complete poster & read Book of OHDSI documentation on the CDM.
     - Try to understand how concept hierarchy is organized.   
   - **RS** to look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
