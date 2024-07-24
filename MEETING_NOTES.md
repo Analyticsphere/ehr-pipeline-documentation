@@ -78,5 +78,7 @@
     - Try to understand how concept hierarchy is organized.   
   - **RS** to look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
   - **RS** to explore the _Cohort construction and evaluation_ section [HADES R packages](https://ohdsi.github.io/Hades/packages.html)
-    - JP specifically interested in Phenotype library
+    - JP specifically interested in:
+        -  [PhenotypeLibrary](https://ohdsi.github.io/PhenotypeLibrary/) for exploring existing cohort definitions
+        -  [Capr](https://ohdsi.github.io/Capr/articles/Capr-conceptSets.html) for defining new cohorts or concept sets.
   - **JP** run Achilles and DQD with a test (Eunomia) as Proof-of-Concept   
