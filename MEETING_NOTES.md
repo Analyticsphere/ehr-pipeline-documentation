@@ -56,11 +56,26 @@
           - Look at medication exposures: metformin, insulin, etc.
           
   - Action:
-    - **RS** & **SM** to send summary email to Nicole reguarding initial analysis of table distributions.
-    - **RS** to look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
-    - **JP** Identify EHR concepts and document in README
-    - **SM** Identify Connect concepts in Background and Overall Health Survey [Module 1]
-    - **SM** If time, look for concepts in Medications Survey related to diabetes medications [Module X]
-      - examples: insulin, metformin, etc.
+    - **RS** & **SM** to send summary email to Nicole reguarding initial analysis of table distributions. **[DONE]**
+    - **RS** to look up OMOP concepts for Cervical Screenings etc. given new OMOP codes. **[TODO]**
+    - **JP** Identify EHR concepts and document in README **[TODO]**
+    - **SM** Identify Connect concepts in Background and Overall Health Survey [Module 1] **[DONE]**
+    - **SM** If time, look for concepts in Medications Survey related to diabetes medications [Module X] **[DONE]**
+      - examples: insulin, metformin, etc. 
       - [Data dictionary](https://github.com/Analyticsphere/ConnectMasterAndSurveyCombinedDataDictionary)
-    - **JP** to generate initial list of concepts for Hemoglobin A1C in CDM tables
+    - **JP** to generate initial list of concepts for Hemoglobin A1C in CDM tables **[TODO]**
+
+### 07/24/24
+- Attendees: JP, RS, SM
+- Soyoun shared her poster. JP & RS to provide feedback this week.
+- JP gave update on new table delivery from HealthPartners
+  - CONNECT_ID now populated. Same as PERSON_ID.
+  - SOURCE_CONCEPT_VALUE is a useful field condition_occurance table
+- Discussed Book of OHDSI documentation on CDM. 
+- Action:
+  - **SM** to complete poster & read Book of OHDSI documentation on the CDM.
+    - Try to understand how concept hierarchy is organized.   
+  - **RS** to look up OMOP concepts for Cervical Screenings etc. given new OMOP codes.
+  - **RS** to explore the _Cohort construction and evaluation_ section [HADES R packages](https://ohdsi.github.io/Hades/packages.html)
+    - JP specifically interested in Phenotype library
+  - **JP** run Achilles and DQD with a test (Eunomia) as Proof-of-Concept   
