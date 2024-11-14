@@ -12,13 +12,18 @@
   - [Screening Procedures (CPT Codes)](#screening-procedures-cpt-codes)
   - [Screening Results (SNOMED CT and ICD-10 Codes)](#screening-results-snomed-ct-and-icd-10-codes)
 
+## Where we are
+- We have EHR data in GCS buckets for two sites, 2 others are ready to upload
+- We aim to have EHR data form 10 sites by Jan 1, 2025.
 ## Objectives
 - Use out-of-the-box OHDSI Tools to:
   - Assess overall quality of EHR data according to OMOP CDM standards **(DataQualityDashboard)**
   - Summarize content of EHR data prior to phenotype/cohort definitions **(ACHILLES)**
-  - Put the results in an explorable form for researchers **(ARES)**
+  - Put the results in an explorable form for researchers **(ARES)** or **(ATLAS)**
   - Identify variables required for Cervical Screening Pilot **(ATHENA)**
-  - Determine which of these are in our data set **(?)**
+    - Define modular **concept sets** related to cervical cancer diagnoses, cervical cancer screening, screening results, etc.
+    - Define priliminary **phenotype** using these
+    - Compare phenotype accross sites using some sort of standardized reporting tool (in ATLAS? or ARES?)  
 
 ## Start-up Tasks
 > “Let's start at the very beginning, a very good place to start” ~ Fraulein Maria
