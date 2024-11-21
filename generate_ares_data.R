@@ -7,35 +7,47 @@
 #       - https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
 
 # Install dependencies
+# Must have this version of Java (15.0.1): https://ohdsi.github.io/Hades/rSetup.html
 library(DatabaseConnector)
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("OHDSI/DataQualityDashboard")
 remotes::install_github("OHDSI/Achilles")
+remotes::install_github("OHDSI/AresIndexer")
 
 # Configure
-aresDataRoot          <- "/ehr-pilot/ares/data"
+aresDataRoot          <- "ares/data"
 cdmVersion            <- "5.3"
-cdmDatabaseSchema     <- "nih-nci-dceg-connect-prod-6d04.ehr"
-resultsDatabaseSchema <- "ohdsi"
-cdmSourceName         <- "nih-nci-dceg-connect-dev"
+cdmDatabaseSchema     <- "cms_synthetic_patient_data_omop" #"ehr"
+resultsDatabaseSchema <- "ohdsi_results" #"ohdsi"
+cdmSourceName         <- "connect-dev" # "connect-prod"
 
 # Specify database parameters
-project_id <- "nih-nci-dceg-connect-prod-6d04"
-dataset    <- "ehr"
+project_id <- "nih-nci-dceg-connect-dev" # "nih-nci-dceg-connect-prod-6d04"
+dataset    <- "cms_synthetic_patient_data_omop" # "ehr"
 
 # Set up driver and environment variable using these instructions:
 # https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
 pathToDriver <- Sys.getenv("DATABASECONNECTOR_JAR_FOLDER")
 
-# Define the JDBC URL
-# ref: https://www.progress.com/tutorials/jdbc/a-complete-guide-for-google-bigquery-authentication
+# Retrieve the access token, refresh token, client id and client secret
+bigrquery::bq_auth()
+token <- bigrquery::bq_token()
 
+# Define the JDBC URL
 jdbc_url <- glue::glue(
   "jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;",
-  "OAuthType=2;",
-  "ProjectID={project_id};",
+  "ProjectId={project_id};",
+  "DatasetId={dataset};",
   "DefalutDataset={dataset};",
-  "OAuthAccessToken={token$auth_token$credentials$access_token};")
+  "OAuthType=2;",
+  "EnableSession=1;",
+  "OAuthAccessToken={token$auth_token$credentials$access_token};",
+  "Timeout=1000;",
+  "AllowLargeResults=0;",
+  "EnableHighThroughputAPI=1;",
+  "UseQueryCache=1;",
+  "LogLevel=0;",
+  "FilterTablesOnDefaultDataset=1")
 
 # Set the path to the directory containing your BigQuery JDBC driver JAR file
 # ref: https://ohdsi.github.io/DatabaseConnector/articles/Connecting.html
@@ -61,6 +73,7 @@ Achilles::achilles(
 # Get data source release key (naming convention for folder structures)
 releaseKey <- AresIndexer::getSourceReleaseKey(connectionDetails, cdmDatabaseSchema)
 datasourceReleaseOutputFolder <- file.path(aresDataRoot, releaseKey)
+#datasourceReleaseOutputFolder <- "v5.3.1/230601"
 
 # Run data quality dashboard and output results to data source release folder in ares data folder
 dqResults <- DataQualityDashboard::executeDqChecks(

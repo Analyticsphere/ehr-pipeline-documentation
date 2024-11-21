@@ -1,3 +1,15 @@
+## Description =================================================================
+# Title:        connect_to_bigquery_with_jdbc.R
+# Author:       Jake Peters
+# Date:         2024-06-01
+# Objective:    Demo minimal process for connecting to Connect EHR datasets in 
+#               BQ.
+#
+# ToDo:         - Document process for installing drivers for future users.
+#               - Use 
+#               - Determine which jdbc_url parameters are unnecessary.
+#               - Produce a .qmd tutorial
+
 # Install dependencies
 library(bigrquery)
 library(DatabaseConnector)
@@ -5,7 +17,7 @@ library(DBI)
 
 # Specify database parameters
 project_id <- "nih-nci-dceg-connect-prod-6d04"
-dataset    <- "ehr"
+dataset    <- "ehr_healthpartners"
 
 # Authenticate to BigQuery
 bigrquery::bq_auth()
