@@ -1,10 +1,27 @@
 from google.cloud import bigquery
 from google.cloud import storage
 import logging
+import csv
 
 raw_synthea_filesfiles = [
     "allergies.csv","careplans.csv","claims.csv","claims_transactions.csv","conditions.csv","devices.csv","encounters.csv","files.txt","imaging_studies.csv","immunizations.csv","medications.csv","observations.csv","organizations.csv","patients.csv","payer_transitions.csv","payers.csv","preprocessed_claim_trans.csv","preprocessed_locations.csv","preprocessed_payer_prd.csv","procedures.csv","providers.csv","supplies.csv"
 ]
+
+def get_csv_headers(bucket_path: str, file_name: str) -> list[str]:
+    """
+    Read the headers from a CSV file in GCS.
+    """
+    storage_client = storage.Client()
+    bucket_name = bucket_path.split('/')[0]
+    blob_path = '/'.join(['/'.join(bucket_path.split('/')[1:]), file_name])
+    
+    bucket = storage_client.get_bucket(bucket_name)
+    blob = bucket.blob(blob_path)
+    
+    content = blob.download_as_string().decode('utf-8').splitlines()
+    reader = csv.reader(content)
+    headers = next(reader)
+    return headers
 
 def transfer_csv_to_bigquery(gcs_bucket_path: str, project_id: str, dataset_id: str, file_list: list[str]) -> None:
     """
@@ -32,47 +49,32 @@ def transfer_csv_to_bigquery(gcs_bucket_path: str, project_id: str, dataset_id: 
         try:
             logging.info(f"Processing {file}...")
             
-            # Delete the CSV table if it exists
+            # Delete the table if it exists
             try:
                 client.delete_table(table_ref)
                 logging.info(f"Deleted existing table {table_ref}")
             except Exception as e:
                 logging.info(f"Table {table_ref} does not exist yet")
             
-            # Configure the job to create all columns as STRING
+            # Get headers from the CSV file
+            headers = get_csv_headers(gcs_bucket_path, file)
+            
+            # Create schema with all columns as STRING
+            schema = [
+                bigquery.SchemaField(header, "STRING")
+                for header in headers
+            ]
+            
+            # Configure the job with explicit schema
             job_config = bigquery.LoadJobConfig(
                 source_format=bigquery.SourceFormat.CSV,
                 skip_leading_rows=1,
-                schema_update_options=[],
-                write_disposition=bigquery.WriteDisposition.WRITE_EMPTY
+                schema=schema,  # Use explicit schema
+                write_disposition=bigquery.WriteDisposition.WRITE_EMPTY,
+                autodetect=False  # Disable autodetect
             )
-            
-            # First load to detect column names
-            temp_job = client.load_table_from_uri(
-                uri,
-                table_ref,
-                job_config=bigquery.LoadJobConfig(
-                    source_format=bigquery.SourceFormat.CSV,
-                    skip_leading_rows=1,
-                    autodetect=True
-                )
-            )
-            temp_job.result()
-            
-            # Get the detected schema
-            table = client.get_table(table_ref)
-            
-            # Create STRING schema based on detected column names
-            schema = [
-                bigquery.SchemaField(field.name, "STRING")
-                for field in table.schema
-            ]
-            
-            # Delete the temporary table
-            client.delete_table(table_ref)
             
             # Load the data with STRING schema
-            job_config.schema = schema
             load_job = client.load_table_from_uri(
                 uri,
                 table_ref,
