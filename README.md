@@ -1,5 +1,11 @@
 # EHR Pilot
 
+##### Meeting Notes
+As of Nov. 2024, all EHR-pilot meeting notes and EHR Infrastructure Setup will be documented on the [GH Wiki](https://github.com/Analyticsphere/ehr-pilot/wiki) associated with this repository. 
+
+##### Project Management
+All major tasks will be be tracked as [GH Issues](https://github.com/Analyticsphere/ehr-pilot/issues) and will be managed in the associated [GH Project](https://github.com/orgs/Analyticsphere/projects/11/views/1) punchlist/kanban board.
+
 ## Table of Contents
 - [Objectives](#objectives)
 - [Start-up Tasks](#start-up-tasks)
