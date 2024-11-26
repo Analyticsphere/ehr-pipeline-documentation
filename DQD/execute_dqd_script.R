@@ -65,7 +65,7 @@ cdmSourceName <- "SynPUF" # a human readable name for your CDM source
 cdmVersion <- "5.4" # the CDM version you are targetting; options are 5.2, 5.3, 5.4
 
 # determine how many threads (concurrent SQL sessions) to use ----------------------------------------
-numThreads <- 1 # on Redshift, 3 seems to work well; (EAF) -> on every other database engine, anything onther than 1 does NOT work
+numThreads <- 1 # on Redshift, 3 seems to work well; (EAF) -> on every other database engine, anything other than 1 does NOT work
 
 # specify if you want to execute the queries or inspect them ------------------------------------------
 sqlOnly <- FALSE # set to TRUE if you just want to get the SQL scripts and not actually run the queries

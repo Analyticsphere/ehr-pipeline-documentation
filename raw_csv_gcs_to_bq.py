@@ -3,7 +3,7 @@ from google.cloud import storage
 import logging
 import csv
 
-raw_synthea_filesfiles = [
+raw_synthea_files = [
     "allergies.csv","careplans.csv","claims.csv","claims_transactions.csv","conditions.csv","devices.csv","encounters.csv","files.txt","imaging_studies.csv","immunizations.csv","medications.csv","observations.csv","organizations.csv","patients.csv","payer_transitions.csv","payers.csv","preprocessed_claim_trans.csv","preprocessed_locations.csv","preprocessed_payer_prd.csv","procedures.csv","providers.csv","supplies.csv"
 ]
 
@@ -93,5 +93,5 @@ transfer_csv_to_bigquery(
     "synthea_datasets/synthea_100_raw",
     "nih-nci-dceg-connect-dev",
     "synthea_raw",
-    raw_synthea_filesfiles
+    raw_synthea_files
 )
