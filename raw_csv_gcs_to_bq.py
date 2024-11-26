@@ -3,8 +3,18 @@ from google.cloud import storage
 import logging
 import csv
 
+"""
 raw_synthea_files = [
     "allergies.csv","careplans.csv","claims.csv","claims_transactions.csv","conditions.csv","devices.csv","encounters.csv","files.txt","imaging_studies.csv","immunizations.csv","medications.csv","observations.csv","organizations.csv","patients.csv","payer_transitions.csv","payers.csv","preprocessed_claim_trans.csv","preprocessed_locations.csv","preprocessed_payer_prd.csv","procedures.csv","providers.csv","supplies.csv"
+]
+"""
+
+synthea_omop_53 = [
+    "attribute_definition.csv","care_site.csv","cdm_source.csv","cohort_definition.csv","concept.csv","concept_ancestor.csv","concept_class.csv","concept_relationship.csv","concept_synonym.csv","condition_era.csv","condition_occurrence.csv","cost.csv","death.csv","device_exposure.csv","domain.csv","dose_era.csv","drug_era.csv","drug_exposure.csv","drug_strength.csv","fact_relationship.csv","location.csv","measurement.csv","metadata.csv","note.csv","note_nlp.csv","observation.csv","observation_period.csv","payer_plan_period.csv","person.csv","procedure_occurrence.csv","provider.csv","relationship.csv","source_to_concept_map.csv","specimen.csv","visit_detail.csv","visit_occurrence.csv","vocabulary.csv"
+]
+
+synthea_omop_54 = [
+    "care_site.csv","cdm_source.csv","cohort.csv","cohort_definition.csv","concept.csv","concept_ancestor.csv","concept_class.csv","concept_relationship.csv","concept_synonym.csv","condition_era.csv","condition_occurrence.csv","cost.csv","death.csv","device_exposure.csv","domain.csv","dose_era.csv","drug_era.csv","drug_exposure.csv","drug_strength.csv","episode.csv","episode_event.csv","fact_relationship.csv","location.csv","measurement.csv","metadata.csv","note.csv","note_nlp.csv","observation.csv","observation_period.csv","payer_plan_period.csv","person.csv","procedure_occurrence.csv","provider.csv","relationship.csv","source_to_concept_map.csv","specimen.csv","visit_detail.csv","visit_occurrence.csv","vocabulary.csv"
 ]
 
 def get_csv_headers(bucket_path: str, file_name: str) -> list[str]:
@@ -21,6 +31,10 @@ def get_csv_headers(bucket_path: str, file_name: str) -> list[str]:
     content = blob.download_as_string().decode('utf-8').splitlines()
     reader = csv.reader(content)
     headers = next(reader)
+
+    # OMOP note_nlp table column contains " character - not allowed in BQ column names, remove those
+    headers = [header.strip().strip('"').strip("'") for header in headers]
+
     return headers
 
 def transfer_csv_to_bigquery(gcs_bucket_path: str, project_id: str, dataset_id: str, file_list: list[str]) -> None:
@@ -90,8 +104,8 @@ def transfer_csv_to_bigquery(gcs_bucket_path: str, project_id: str, dataset_id: 
 
 
 transfer_csv_to_bigquery(
-    "synthea_datasets/synthea_100_raw",
+    "synthea_datasets/synthea_100_omop_53",
     "nih-nci-dceg-connect-dev",
-    "synthea_raw",
-    raw_synthea_files
+    "synthea_cdm53",
+    synthea_omop_53
 )
