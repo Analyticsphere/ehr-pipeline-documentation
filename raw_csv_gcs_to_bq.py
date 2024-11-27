@@ -104,8 +104,8 @@ def transfer_csv_to_bigquery(gcs_bucket_path: str, project_id: str, dataset_id: 
 
 
 transfer_csv_to_bigquery(
-    "synthea_datasets/synthea_100_omop_53",
+    "synthea_datasets/synthea_100_omop_54",
     "nih-nci-dceg-connect-dev",
-    "synthea_cdm53",
-    synthea_omop_53
+    "synthea_cdm54",
+    synthea_omop_54
 )
