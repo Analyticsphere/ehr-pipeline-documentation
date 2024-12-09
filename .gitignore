@@ -8,3 +8,4 @@ ehr-pilot.Rproj
 /DQD/bq_driver/**
 /DQD/output/**
 /Achilles/output/**
+csv_to_bq/__pycache__/utils.cpython-313.pyc
