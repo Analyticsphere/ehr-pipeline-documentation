@@ -67,6 +67,7 @@ achilles(connectionDetails = connection_details,
          outputFolder = outputFolder)
 
 # http://127.0.0.1/WebAPI/ddl/achilles?dialect=bigquery&vocabSchema=synthea_cdm53&schema=synthea_cdm53
+# After the Achilles R package executes, run this SQL script to generate the achilles_result_concept_count table
 /************************************************/
 /***** Create record and person count table *****/
 /************************************************/
