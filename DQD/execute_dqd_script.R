@@ -18,7 +18,7 @@ jdbc_driver_path <- "/Users/frankenbergerea/Development/ehr-pilot/DQD/bq_driver"
 
 # Specify database parameters
 project_id <- "nih-nci-dceg-connect-dev"
-dataset    <- "cms_synthetic_patient_data_omop"
+dataset    <- "synthea_cdm53"
 
 # Authenticate to BigQuery
 bigrquery::bq_auth()
@@ -58,11 +58,11 @@ conn <- DatabaseConnector::connect(connection_details)
 
 #----------------------------------------------------------------
 
-fully_qualified_db <- paste(project_id, ".", dataset)
+fully_qualified_db <- paste0(project_id, ".", dataset)
 cdmDatabaseSchema <-  fully_qualified_db 
 resultsDatabaseSchema <- fully_qualified_db # Write results to the CDM dataset; (EAF) -> this should be the same database with the CDM data
-cdmSourceName <- "SynPUF" # a human readable name for your CDM source
-cdmVersion <- "5.4" # the CDM version you are targetting; options are 5.2, 5.3, 5.4
+cdmSourceName <- "Synthea 5.3" # a human readable name for your CDM source
+cdmVersion <- "5.3" # the CDM version you are targetting; options are 5.2, 5.3, 5.4
 
 # determine how many threads (concurrent SQL sessions) to use ----------------------------------------
 numThreads <- 1 # on Redshift, 3 seems to work well; (EAF) -> on every other database engine, anything other than 1 does NOT work
@@ -123,3 +123,6 @@ DataQualityDashboard::executeDqChecks(connectionDetails = connection_details,
                             checkLevels = checkLevels,
                             tablesToExclude = tablesToExclude,
                             checkNames = checkNames)
+
+# Vizualize DQD results in an rshiny dashboard
+DataQualityDashboard::viewDqDashboard("/Users/frankenbergerea/Development/ehr-pilot/DQD/output/results.json")
