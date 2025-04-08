@@ -9,3 +9,6 @@ ehr-pilot.Rproj
 /DQD/output/**
 /Achilles/output/**
 csv_to_bq/__pycache__/utils.cpython-313.pyc
+README.html 
+.Rprofile 
+README_files/
