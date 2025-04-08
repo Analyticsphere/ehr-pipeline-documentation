@@ -11,4 +11,7 @@ The application consists of multiple repositories that work together to complete
 - The [`ccc-orchestrator`](https://github.com/Analyticsphere/ccc-orchestrator) repository provides functionality to automate the execution of a pipeline run
   
 ## User guides 
-A [comprehensive user](https://github.com/Analyticsphere/ehr-pipeline-documentation/wiki/OMOP-Pipeline-User-Guide) guide can be found on the wiki page. 
+- A [comprehensive user](https://github.com/Analyticsphere/ehr-pipeline-documentation/wiki/OMOP-Pipeline-User-Guide) guide can be found on the wiki page.
+- A [file processor quick start guide](https://github.com/Analyticsphere/ccc-omop-file-processor?tab=readme-ov-file#omop-file-processor---quick-start-guide) is available describing the basic setup and usage of the file processor endpoints.
+- The [file processor api documentation](https://github.com/Analyticsphere/ccc-omop-file-processor?tab=readme-ov-file#omop-data-processing-api-documentation) details each endpoint in the file processor API.
+  
